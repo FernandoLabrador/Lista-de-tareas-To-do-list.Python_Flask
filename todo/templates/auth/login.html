@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>{% block title %}Iniciar sesión{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+
+<form class="contenedor-log" method="POST">
+	<label class="letras-reglog" for="username">Nombre de Usuario</label>
+	<input class="input-log" name="username" id="username" required>
+	<label class="letras-reglog" for="password">Contraseña</label>
+	<input class="input-log" type="password" name="password" id="password" required>
+	<input class="boton-log" type="submit" value="Inicia sesión">
+</form>
+
+
+{% endblock %}

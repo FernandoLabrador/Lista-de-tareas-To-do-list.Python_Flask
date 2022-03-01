@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>{% block title %}Tareas{% endblock %}</h2>
+{% if g.user %}
+
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+{% for todo in todos %}
+
+
+<div class="contenedor-tarea">
+	<div class="contenido-tarea">
+		<span class="tarea-tilde">
+			{% if todo['completed'] == 1 %}
+			<i class="fas fa-check-circle fa-2x tilde"></i>
+			<span class="tarea"><strike>{{ todo['description'] }}</strike></span>
+			{% else %}
+			<i class="fas fa-check-circle red tilde"></i>
+			<span class="tarea">{{ todo['description'] }}</span>
+			{% endif %}
+		</span>
+		<div class="">{{ todo['created_at'].strftime('%Y-%m-%d') }}</div>
+
+		<a class="letra-editar" href="{{ url_for('todo.update', id=todo['id']) }}">Editar</a>
+		<form class="logo-eliminar" action="{{ url_for('todo.delete', id=todo['id']) }}" method="post">
+			<button name="Eliminar tarea" class="boton-eliminar" type="submit"
+				onclick="return confirm('Estas seguro de querer eliminarlo?')"><i class="far fa-trash-alt"></i></button>
+			<!-- <input class="danger" type="submit" value="X"
+				onclick="return confirm('Estas seguro de querer eliminarlo?')" /> -->
+		</form>
+	</div>
+</div>
+
+
+{% if not loop.last %}
+
+{% endif %}
+{% endfor %}
+<a class="links" href="{{ url_for('todo.create') }}">
+	<div class="contenedor-nuevatarea"><i class="fas fa-plus-circle icono-nuevatarea" alt="Circulo positivo"></i>
+		<div class="letras-nuevatarea">Nueva Tarea</div>
+	</div>
+</a>
+
+{% endblock %}

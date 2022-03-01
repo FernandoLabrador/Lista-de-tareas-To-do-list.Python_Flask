@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>{% block title %}Nueva tarea{% endblock %}</h2>
+{% endblock %}
+
+{% block content %}
+<form class="contenedor-editarcrear" method="POST">
+	<section class="contenedor-letras-EC">
+		<input class="letras-editarcrear" placeholder="Cual es la nueva tarea?" name="description" id="description"
+			required />
+	</section>
+	<section class="contenedor-botones">
+		<div class="left">
+			<a class="botones-secundarios links" href="{{ url_for('todo.index') }}">cancelar</a>
+			<input class="boton-guardar" type="submit" value="Guardar" />
+		</div>
+	</section>
+</form>
+{% endblock %}
