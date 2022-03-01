@@ -25,7 +25,7 @@ def create_app():
 
     @app.route('/portfolio')
     def portfolio():
-        return '<h1>Aqui iria la pagina de mi portfolio</h1> <p><a href="https://github.com/cornalitosalvag/probemorey" target="_blank" >Aqui</a> le vez las tripas</p>'
+        return '<h1>Aqui iria la pagina de mi portfolio</h1> <p><a href="https://github.com/FernandoLabrador/Lista-de-tareas-To-do-list.Python_Flask" target="_blank" >Aqui</a> le vez las tripas</p>'
 
     return app
 
