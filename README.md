@@ -1,10 +1,11 @@
 # Lista-de-tareas-To-do-list.Python_Flask
-Aplicacion en Python-Flask + Mysql. Lista de tareas con inicio de seccion
+Lista de tareas con inicio de seccion. <br/>
+Aplicacion en Python-Flask + Mysql. 
 
 https://listadtareas.herokuapp.com/
 
-Usuario de prueba:
-NOMBRE DE USUARIO = usuario
+Usuario de prueba:<br/>
+NOMBRE DE USUARIO = usuario <br/>
 CONTRASEÑA = 123456
 
 Css tomado de referencia de https://pomofocus.io/
